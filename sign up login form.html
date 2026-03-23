@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sign In</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    text-align:center;
+    width:360px;
+}
+
+h1{
+    color:#e5390c;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#8c8c8c;
+    font-size:14px;
+    margin-bottom:35px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+input[type="text"],
+input[type="password"]{
+    width:100%;
+    padding:14px;
+    border:1px solid #e2e2e2;
+    border-radius:8px;
+    font-size:14px;
+    outline:none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border-color:#e5390c;
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    color:#777;
+    margin-bottom:15px;
+}
+
+.checkbox input{
+    accent-color:#e5390c;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#e5390c;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(229,57,12,0.25);
+}
+
+button:hover{
+    background:#d6330b;
+}
+
+.login-link{
+    margin-top:18px;
+    font-size:14px;
+    color:#777;
+}
+
+.login-link a{
+    color:#e5390c;
+    text-decoration:none;
+    font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>WELCOME TO <br>FLAVOUR</h1>
+
+<p class="subtitle">Create your Account in a few seconds</p>
+
+<form>
+
+<div class="input-group">
+<input type="text" placeholder="Name">
+</div>
+
+<div class="input-group">
+<input type="text" placeholder="Email Address/Phone number">
+</div>
+
+<div class="input-group">
+<input type="password" placeholder="Password" id="password">
+</div>
+
+<label class="checkbox">
+<input type="checkbox" onclick="togglePassword()">
+<span>Show Password</span>
+</label>
+
+<label class="checkbox">
+<input type="checkbox" checked>
+<span>I agree to the terms and privacy policy</span>
+</label>
+
+<button type="submit">Sign in & Order Now</button>
+
+</form>
+
+<div class="login-link">
+Already member ? <a href="#">Login</a>
+</div>
+
+</div>
+
+<script>
+
+function togglePassword() {
+
+var passwordField = document.getElementById("password");
+
+if(passwordField.type === "password"){
+    passwordField.type = "text";
+}
+else{
+    passwordField.type = "password";
+}
+
+}
+
+</script>
+
+</body>
+</html>
